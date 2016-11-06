@@ -105,7 +105,7 @@ static void Settings_readMeterModes(Settings* this, char* line, int column) {
 }
 
 static void Settings_defaultMeters(Settings* this) {
-   int sizes[] = { 3, 3 };
+   int sizes[] = { 3, 5 };
    if (this->cpuCount > 4) {
       sizes[1]++;
    }
@@ -140,6 +140,10 @@ static void Settings_defaultMeters(Settings* this) {
    this->columns[1].names[r] = xStrdup("LoadAverage");
    this->columns[1].modes[r++] = TEXT_METERMODE;
    this->columns[1].names[r] = xStrdup("Uptime");
+   this->columns[1].modes[r++] = TEXT_METERMODE;
+   this->columns[1].names[r] = xStrdup("CPUTemp");
+   this->columns[1].modes[r++] = TEXT_METERMODE;
+   this->columns[1].names[r] = xStrdup("CPUFreq");
    this->columns[1].modes[r++] = TEXT_METERMODE;
 }
 

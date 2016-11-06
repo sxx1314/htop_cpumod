@@ -4,7 +4,7 @@ Quick installation (RPi)
 $ wget https://github.com/wbenny/htop/files/573914/htop_2.0.2-2_armhf.deb.zip
 $ unzip htop_2.0.2-2_armhf.deb.zip
 $ # You can install this package over old version.
-$ sudo dpkg -i htop_2.0.2-2_armhf.deb.zip
+$ sudo dpkg -i htop_2.0.2-2_armhf.deb
 $ # In case you want create new default config file:
 $ rm -rf ~/.config/htop/htoprc
 ```

@@ -118,6 +118,9 @@ typedef enum ColorElements_ {
    CPU_SOFTIRQ,
    CPU_STEAL,
    CPU_GUEST,
+   TEMPERATURE_COOL,
+   TEMPERATURE_MEDIUM,
+   TEMPERATURE_HOT,
    LAST_COLORELEMENT
 } ColorElements;
 
@@ -222,6 +225,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = ColorPair(Magenta,Black),
       [CPU_STEAL] = ColorPair(Cyan,Black),
       [CPU_GUEST] = ColorPair(Cyan,Black),
+      [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Black),
+      [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
+      [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Black),
    },
    [COLORSCHEME_MONOCHROME] = {
       [RESET_COLOR] = A_NORMAL,
@@ -281,6 +287,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = A_BOLD,
       [CPU_STEAL] = A_REVERSE,
       [CPU_GUEST] = A_REVERSE,
+      [TEMPERATURE_COOL] = A_DIM,
+      [TEMPERATURE_MEDIUM] = A_NORMAL,
+      [TEMPERATURE_HOT] = A_BOLD,
    },
    [COLORSCHEME_BLACKONWHITE] = {
       [RESET_COLOR] = ColorPair(Black,White),
@@ -340,6 +349,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = ColorPair(Blue,White),
       [CPU_STEAL] = ColorPair(Cyan,White),
       [CPU_GUEST] = ColorPair(Cyan,White),
+      [TEMPERATURE_COOL] = ColorPair(Green,White),
+      [TEMPERATURE_MEDIUM] = ColorPair(Yellow,White),
+      [TEMPERATURE_HOT] = ColorPair(Red,White),
    },
    [COLORSCHEME_LIGHTTERMINAL] = {
       [RESET_COLOR] = ColorPair(Black,Black),
@@ -399,6 +411,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = ColorPair(Blue,Black),
       [CPU_STEAL] = ColorPair(Black,Black),
       [CPU_GUEST] = ColorPair(Black,Black),
+      [TEMPERATURE_COOL] = ColorPair(Green,Black),
+      [TEMPERATURE_MEDIUM] = ColorPair(Yellow,Black),
+      [TEMPERATURE_HOT] = ColorPair(Red,Black),
    },
    [COLORSCHEME_MIDNIGHT] = {
       [RESET_COLOR] = ColorPair(White,Blue),
@@ -458,6 +473,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = ColorPair(Black,Blue),
       [CPU_STEAL] = ColorPair(White,Blue),
       [CPU_GUEST] = ColorPair(White,Blue),
+      [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Blue),
+      [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Blue),
+      [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Blue),
    },
    [COLORSCHEME_BLACKNIGHT] = {
       [RESET_COLOR] = ColorPair(Cyan,Black),
@@ -517,6 +535,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [CPU_SOFTIRQ] = ColorPair(Blue,Black),
       [CPU_STEAL] = ColorPair(Cyan,Black),
       [CPU_GUEST] = ColorPair(Cyan,Black),
+      [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Black),
+      [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
+      [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Black),
    },
    [COLORSCHEME_BROKENGRAY] = { 0 } // dynamically generated.
 };

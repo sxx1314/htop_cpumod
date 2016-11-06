@@ -1,3 +1,16 @@
+Quick installation (RPi)
+------------------------
+```bash
+$ wget https://github.com/wbenny/htop/files/573914/htop_2.0.2-2_armhf.deb.zip
+$ unzip htop_2.0.2-2_armhf.deb.zip
+$ # You can install this package over old version.
+$ sudo dpkg -i htop_2.0.2-2_armhf.deb.zip
+$ # In case you want create new default config file:
+$ rm -rf ~/.config/htop/htoprc
+```
+
+![htop-image](http://i.imgur.com/u2f2tjV.png)
+
 [![Build Status](https://travis-ci.org/hishamhm/htop.svg?branch=master)](https://travis-ci.org/hishamhm/htop)
 [![PayPal donate](https://img.shields.io/badge/paypal-donate-green.svg)](http://hisham.hm/htop/index.php?page=donate)
 

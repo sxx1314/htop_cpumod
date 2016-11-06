@@ -121,6 +121,9 @@ typedef enum ColorElements_ {
    TEMPERATURE_COOL,
    TEMPERATURE_MEDIUM,
    TEMPERATURE_HOT,
+   CPUFREQ_LOW,
+   CPUFREQ_MEDIUM,
+   CPUFREQ_HIGH,
    LAST_COLORELEMENT
 } ColorElements;
 
@@ -228,6 +231,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Black),
       [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
       [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Black),
+      [CPUFREQ_LOW] = A_DIM | ColorPair(Green,Black),
+      [CPUFREQ_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
+      [CPUFREQ_HIGH] = A_BOLD | ColorPair(Red,Black),
    },
    [COLORSCHEME_MONOCHROME] = {
       [RESET_COLOR] = A_NORMAL,
@@ -290,6 +296,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = A_DIM,
       [TEMPERATURE_MEDIUM] = A_NORMAL,
       [TEMPERATURE_HOT] = A_BOLD,
+      [CPUFREQ_LOW] = A_DIM,
+      [CPUFREQ_MEDIUM] = A_NORMAL,
+      [CPUFREQ_HIGH] = A_BOLD,
    },
    [COLORSCHEME_BLACKONWHITE] = {
       [RESET_COLOR] = ColorPair(Black,White),
@@ -352,6 +361,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = ColorPair(Green,White),
       [TEMPERATURE_MEDIUM] = ColorPair(Yellow,White),
       [TEMPERATURE_HOT] = ColorPair(Red,White),
+      [CPUFREQ_LOW] = ColorPair(Green,White),
+      [CPUFREQ_MEDIUM] = ColorPair(Yellow,White),
+      [CPUFREQ_HIGH] = ColorPair(Red,White),
    },
    [COLORSCHEME_LIGHTTERMINAL] = {
       [RESET_COLOR] = ColorPair(Black,Black),
@@ -414,6 +426,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = ColorPair(Green,Black),
       [TEMPERATURE_MEDIUM] = ColorPair(Yellow,Black),
       [TEMPERATURE_HOT] = ColorPair(Red,Black),
+      [CPUFREQ_LOW] = ColorPair(Green,Black),
+      [CPUFREQ_MEDIUM] = ColorPair(Yellow,Black),
+      [CPUFREQ_HIGH] = ColorPair(Red,Black),
    },
    [COLORSCHEME_MIDNIGHT] = {
       [RESET_COLOR] = ColorPair(White,Blue),
@@ -476,6 +491,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Blue),
       [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Blue),
       [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Blue),
+      [CPUFREQ_LOW] = A_DIM | ColorPair(Green,Blue),
+      [CPUFREQ_MEDIUM] = A_NORMAL | ColorPair(Yellow,Blue),
+      [CPUFREQ_HIGH] = A_BOLD | ColorPair(Red,Blue),
    },
    [COLORSCHEME_BLACKNIGHT] = {
       [RESET_COLOR] = ColorPair(Cyan,Black),
@@ -538,6 +556,9 @@ int CRT_colorSchemes[LAST_COLORSCHEME][LAST_COLORELEMENT] = {
       [TEMPERATURE_COOL] = A_DIM | ColorPair(Green,Black),
       [TEMPERATURE_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
       [TEMPERATURE_HOT] = A_BOLD | ColorPair(Red,Black),
+      [CPUFREQ_LOW] = A_DIM | ColorPair(Green,Black),
+      [CPUFREQ_MEDIUM] = A_NORMAL | ColorPair(Yellow,Black),
+      [CPUFREQ_HIGH] = A_BOLD | ColorPair(Red,Black),
    },
    [COLORSCHEME_BROKENGRAY] = { 0 } // dynamically generated.
 };

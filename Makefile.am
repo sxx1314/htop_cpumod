@@ -40,11 +40,11 @@ if HTOP_LINUX
 htop_CFLAGS += -rdynamic 
 myhtopplatsources = linux/Platform.c linux/IOPriorityPanel.c linux/IOPriority.c \
 linux/LinuxProcess.c linux/LinuxProcessList.c linux/LinuxCRT.c linux/Battery.c \
-linux/CPUTempMeter.c
+linux/CPUTempMeter.c linux/CPUFreqMeter.c
 
 myhtopplatheaders = linux/Platform.h linux/IOPriorityPanel.h linux/IOPriority.h \
 linux/LinuxProcess.h linux/LinuxProcessList.h linux/LinuxCRT.h linux/Battery.h \
-linux/CPUTempMeter.h
+linux/CPUTempMeter.h linux/CPUFreqMeter.h
 endif
 
 if HTOP_FREEBSD

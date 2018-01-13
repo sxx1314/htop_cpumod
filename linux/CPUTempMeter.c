@@ -42,8 +42,9 @@ static void CPUTempMeter_updateValues(Meter* this, char* buffer, int len) {
    double temperature;
    temperature = strtod(line, NULL);
    free(line);
-
-   temperature /= 1000.0;
+   // some of the systems(e.g Orange Pi) show real temperature in Celcius and therefore we do not need to divide by 1000 
+   if (temperature > 1000.0) temperature /= 1000.0;
+ 
    this->values[0] = temperature;
 
    snprintf(buffer, len, "%d/%d", (int)this->values[0], (int)this->total);

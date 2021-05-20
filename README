@@ -18,7 +18,7 @@
 ![](https://github.com/sxx1314/htop_cpumod/raw/main/img/htop.png)
 
 ### 补充另一个arm64专用htop(big.LITTLE) 在 arm64目录下，含预编译的deb可直接安装
-![](https://github.com/sxx1314/htop_cpumod/raw/main/img/nanopi-m4.gif)
+
 ![](https://github.com/sxx1314/htop_cpumod/raw/master/img/nanopi-m4.gif)
 ![](https://github.com/sxx1314/htop_cpumod/raw/master/img/vcore.gif)
 ![](https://github.com/sxx1314/htop_cpumod/raw/raw/master/img/htop_setup.gif)

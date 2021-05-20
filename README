@@ -1,8 +1,8 @@
 ## 一个带CPU温度/CPU频率显示的HTOP工具。
 
-### 新特性
+### 代码整理
 
-- 支持 x86 amd64 以及 arm64/armhf等。
+- 支持 x86 amd64 以及 arm64/armhf等。如果是x86/amd64使用官方的htop项目即可，默认使用的是libsensors获取温度。
 - 主干测试树莓派以及s912等板子正常使用，intel的cpu也正常显示。
 - 已修复高版本gcc的报错问题。
 

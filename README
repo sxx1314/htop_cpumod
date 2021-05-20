@@ -1,73 +1,23 @@
-Quick installation (RPi)
-------------------------
-```bash
-$ wget https://github.com/wbenny/htop/files/573914/htop_2.0.2-2_armhf.deb.zip
-$ unzip htop_2.0.2-2_armhf.deb.zip
-$ # You can install this package over old version.
-$ sudo dpkg -i htop_2.0.2-2_armhf.deb
-$ # In case you want create new default config file:
-$ rm -rf ~/.config/htop/htoprc
-```
+## 一个带cpu温度/CPU频率显示的HTOP工具。
 
-![htop-image](http://i.imgur.com/u2f2tjV.png)
+### 新特性
 
-[![Build Status](https://travis-ci.org/hishamhm/htop.svg?branch=master)](https://travis-ci.org/hishamhm/htop)
-[![PayPal donate](https://img.shields.io/badge/paypal-donate-green.svg)](http://hisham.hm/htop/index.php?page=donate)
+- 支持 x86 amd64 以及 arm64/armhf等。
+- 主干测试树莓派以及s912等板子正常使用，intel的cpu也正常显示。
+- 已修复高版本gcc的报错问题。
 
-[htop](http://hisham.hm/htop/)
-====
+### 安装步骤
 
-by Hisham Muhammad <hisham@gobolinux.org> (2004 - 2016)
+1.  sudo apt-get install autoconf automake libtool libncurses-dev build-essential python  #注意这里Python可以直接软链接python3
 
-Introduction
-------------
+2. ./autogen.sh && ./configure && make
 
-This is `htop`, an interactive process viewer.
-It requires `ncurses`. It is developed primarily on Linux,
-but we also have code for running under FreeBSD and Mac OS X
-(help and testing are wanted for these platforms!)
+3. 默认 `make install` 安装到了 `/usr/local`  如果需要修改请自行添加目录 `./configure --prefix=/some/path`.
 
-This software has evolved considerably over the years,
-and is reasonably complete, but there is always room for improvement.
+### 效果展示
+![](https://github.com/sxx1314/htop_cpumod/raw/main/htop.png)
 
-Comparison between `htop` and classic `top`
--------------------------------------------
 
-* In `htop` you can scroll the list vertically and horizontally
-  to see all processes and full command lines.
-* In `top` you are subject to a delay for each unassigned
-  key you press (especially annoying when multi-key escape
-  sequences are triggered by accident).
-* `htop` starts faster (`top` seems to collect data for a while
-  before displaying anything).
-* In `htop` you don't need to type the process number to
-  kill a process, in `top` you do.
-* In `htop` you don't need to type the process number or
-  the priority value to renice a process, in `top` you do.
-* In `htop` you can kill multiple processes at once.
-* `top` is older, hence, more tested.
-
-Compilation instructions
-------------------------
-
-This program is distributed as a standard autotools-based package.
-See the [INSTALL](/INSTALL) file for detailed instructions.
-
-When compiling from a [release tarball](https://hisham.hm/htop/releases/), run:
-
-    ./configure && make
-
-For compiling sources downloaded from the Git repository, run:
-
-    ./autogen.sh && ./configure && make
-
-By default `make install` will install into `/usr/local`, for changing
-the path use `./configure --prefix=/some/path`.
-
-See the manual page (`man htop`) or the on-line help ('F1' or 'h'
-inside `htop`) for a list of supported key commands.
-
-If not all keys work check your curses configuration.
 
 ## License
 

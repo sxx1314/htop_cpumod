@@ -18,7 +18,7 @@ in the source distribution for its full text.
 #include <sys/resource.h>
 #include <sys/param.h>
 #include <sys/stat.h>
-#include <sys/types.h>
+#include <sys/sysmacros.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <signal.h>

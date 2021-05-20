@@ -24,7 +24,7 @@ in the source distribution for its full text.
 #include <string.h>
 #include <time.h>
 #include <assert.h>
-#include <sys/types.h>
+#include <sys/sysmacros.h>
 #include <fcntl.h>
 
 /*{

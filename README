@@ -15,9 +15,13 @@
 3. 默认 `make install` 安装到了 `/usr/local`  如果需要修改请自行添加目录 `./configure --prefix=/some/path`.
 
 ### 效果展示
-![](https://github.com/sxx1314/htop_cpumod/raw/main/htop.png)
+![](https://github.com/sxx1314/htop_cpumod/raw/main/img/htop.png)
 
-
+###补充另一个arm64专用htop(big.LITTLE) 在 arm64目录下，含预编译的deb可直接安装
+![](https://github.com/sxx1314/htop_cpumod/raw/main/img/nanopi-m4.gif)
+![](https://github.com/sxx1314/htop_cpumod/raw/master/img/nanopi-m4.gif)
+![](https://github.com/sxx1314/htop_cpumod/raw/master/img/vcore.gif)
+![](https://github.com/sxx1314/htop_cpumod/raw/raw/master/img/htop_setup.gif)
 
 ## License
 

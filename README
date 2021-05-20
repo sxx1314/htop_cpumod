@@ -1,12 +1,12 @@
-##一个带cpu温度/CPU频率显示的HTOP工具。
+## 一个带cpu温度/CPU频率显示的HTOP工具。
 
-###新特性
+### 新特性
 
 - 支持 x86 amd64 以及 arm64/armhf等。
 - 主干测试树莓派以及s912等板子正常使用，intel的cpu也正常显示。
 - 已修复高版本gcc的报错问题。
 
-###安装步骤
+### 安装步骤
 
 1.  sudo apt-get install autoconf automake libtool libncurses-dev build-essential python  #注意这里Python可以直接软链接python3
 
@@ -14,7 +14,7 @@
 
 3. 默认 `make install` 安装到了 `/usr/local`  如果需要修改请自行添加目录 `./configure --prefix=/some/path`.
 
-###效果展示
+### 效果展示
 ![](https://github.com/sxx1314/htop_cpumod/raw/main/htop.png)
 
 
